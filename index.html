@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Claude Code Ecosystem Certification</title>
+    <title>Plot Code Ecosystem Level One Certification</title>
     <meta
       name="description"
-      content="A polished one-pager for the Claude Code Ecosystem Certification, built from transcripted source videos and arranged in source order."
+      content="Login-gated certification portal with the full Plot Code Ecosystem Level One video curriculum and lesson checklists."
     />
-    <meta property="og:title" content="Claude Code Ecosystem Certification" />
+    <meta property="og:title" content="Plot Code Ecosystem Level One Certification" />
     <meta
       property="og:description"
-      content="A practical certification for teams who want Chat, Cowork, Code, connectors, and delivery workflows working together on day one."
+      content="A practical video certification that takes teams from getting started to intermediate while helping them save hours each day."
     />
     <meta property="og:image" content="site/assets/brand/social-card.png" />
     <link rel="stylesheet" href="styles.css" />
@@ -23,132 +23,128 @@
         <div class="brand-lockup">
           <span class="brand-mark"></span>
           <div>
-            <p class="eyebrow">Certification Lead Magnet</p>
-            <p class="brand-name">Claude Code Ecosystem</p>
+            <p class="eyebrow">Certification Portal</p>
+            <p class="brand-name">Plot Code Ecosystem</p>
           </div>
         </div>
         <nav class="nav">
+          <a href="#benefits">Benefits</a>
           <a href="#curriculum">Curriculum</a>
-          <a href="#outcomes">Outcomes</a>
-          <a href="#provenance">Provenance</a>
+          <button class="nav-button hidden" id="logout-button" type="button">Log Out</button>
         </nav>
       </header>
 
       <main>
-        <section class="hero reveal">
-          <div class="hero-copy">
-            <p class="eyebrow" id="hero-kicker">Lead Magnet One-Pager</p>
-            <h1 id="hero-title">Claude Code Ecosystem Certification</h1>
+        <section class="auth-shell reveal" id="auth-view">
+          <div class="auth-copy">
+            <p class="eyebrow" id="hero-kicker">Level One Certification</p>
+            <h1 id="hero-title">Plot Code Ecosystem Level One Certification</h1>
             <p class="hero-headline" id="hero-headline"></p>
             <p class="hero-subheadline" id="hero-subheadline"></p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#curriculum">See The Curriculum</a>
-              <a class="button button-secondary" href="#outcomes">View Outcomes</a>
-            </div>
             <div class="stat-ribbon" id="stat-ribbon"></div>
+
+            <div class="marketing-grid" id="benefits">
+              <article class="marketing-card">
+                <p class="card-label">What This Is</p>
+                <h2>Plot Code Ecosystem Level One Certification.</h2>
+                <p>
+                  A practical certification portal built around the actual curriculum, not generic
+                  AI talking points, so learners can watch the lessons and immediately apply them.
+                </p>
+              </article>
+              <article class="marketing-card">
+                <p class="card-label">Why You Should Do This</p>
+                <h2>It takes you from getting started to intermediate.</h2>
+                <p>
+                  This matters because the workflows in this certification can save you anywhere
+                  between two and four hours a day once you start implementing what you learned.
+                </p>
+              </article>
+            </div>
+
+            <section class="audience-panel">
+              <div>
+                <p class="section-kicker">Who It Is For</p>
+                <div class="pill-list" id="audience-list"></div>
+              </div>
+              <div>
+                <p class="section-kicker">Why Teams Buy It</p>
+                <div class="check-list" id="outcome-list"></div>
+              </div>
+            </section>
           </div>
 
-          <div class="hero-visual">
+          <aside class="login-card">
             <img
+              class="login-art"
               src="site/assets/brand/hero-art.png"
-              alt="Branded Claude Code Ecosystem Certification poster"
+              alt="Plot Code Ecosystem certification artwork"
             />
-            <div class="floating-note">
-              <p class="floating-label">Built From Source Clips</p>
-              <p id="hero-note">
-                Transcript-derived curriculum built in the exact usable order of the supplied exports.
+            <div class="login-copy">
+              <p class="section-kicker" id="login-title">Member Login</p>
+              <h2>Enter the certification portal.</h2>
+              <p id="login-subheadline">
+                Use your email and password to access the full course library.
               </p>
             </div>
-          </div>
+            <form id="login-form" class="login-form">
+              <label class="field">
+                <span>Email</span>
+                <input id="email" type="email" name="email" placeholder="you@company.com" required />
+              </label>
+              <label class="field">
+                <span>Password</span>
+                <input
+                  id="password"
+                  type="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </label>
+              <label class="remember-row">
+                <input type="checkbox" checked />
+                <span>Remember this device</span>
+              </label>
+              <button class="button button-primary button-full" type="submit">Log In</button>
+              <p class="form-note" id="login-feedback">
+                Standard front-end login for the course portal. Use any valid email and password to
+                enter.
+              </p>
+            </form>
+          </aside>
         </section>
 
-        <section class="value-grid reveal">
-          <article class="value-card">
-            <p class="card-label">What This Is</p>
-            <h2>A polished proof piece for prospects who already know AI matters.</h2>
-            <p>
-              This page turns raw training footage into a concise certification narrative you can
-              hand to potential clients, prospects, and internal stakeholders.
-            </p>
-          </article>
-          <article class="value-card">
-            <p class="card-label">What It Signals</p>
-            <h2>You operationalize Claude across business workflows and build work.</h2>
-            <p>
-              The curriculum shows setup, prompting, permissions, business connectors, and the
-              decision layer around MCPs, skills, and CLI execution.
-            </p>
-          </article>
-          <article class="value-card">
-            <p class="card-label">Why It Converts</p>
-            <h2>It is grounded in real source material, not generic AI talking points.</h2>
-            <p>
-              Every module title and takeaway was derived from transcripted source exports rather
-              than invented from scratch.
-            </p>
-          </article>
-        </section>
-
-        <section class="split-section reveal" id="outcomes">
-          <div class="split-panel">
-            <p class="section-kicker">Who It Is For</p>
-            <div class="pill-list" id="audience-list"></div>
-          </div>
-          <div class="split-panel">
-            <p class="section-kicker">What They Leave With</p>
-            <div class="check-list" id="outcome-list"></div>
-          </div>
-        </section>
-
-        <section class="curriculum reveal" id="curriculum">
-          <div class="section-header">
-            <p class="section-kicker">Source-Order Curriculum</p>
-            <h2>Seven modules distilled from the supplied Descript exports.</h2>
-            <p>
-              The cards below preserve the order of the usable source clips and turn each segment
-              into a marketable learning outcome with a title, headline, and subheadline.
-            </p>
-          </div>
-          <div class="module-grid" id="module-grid"></div>
-        </section>
-
-        <section class="proof-strip reveal">
-          <div class="proof-card">
-            <span class="proof-number">01</span>
+        <section class="portal hidden" id="portal-view">
+          <div class="portal-hero reveal">
             <div>
-              <p class="proof-title">Setup that reduces drag</p>
-              <p>Desktop, terminal, permissions, workspace, and browser access.</p>
+              <p class="eyebrow">Certification Dashboard</p>
+              <h2 id="portal-title">Welcome to the course.</h2>
+              <p class="portal-copy">
+                Watch the modules in order, then use the checklist under each lesson as a simple
+                exercise to reinforce what was covered.
+              </p>
+            </div>
+            <div class="portal-card">
+              <p class="section-kicker">Progress Path</p>
+              <p class="portal-stat">Getting Started -> Intermediate</p>
+              <p class="portal-small">Built for operators, employees, employers, and business leaders.</p>
             </div>
           </div>
-          <div class="proof-card">
-            <span class="proof-number">02</span>
-            <div>
-              <p class="proof-title">Prompts tied to business reality</p>
-              <p>Real stacks, real pain points, and real non-technical constraints.</p>
-            </div>
-          </div>
-          <div class="proof-card">
-            <span class="proof-number">03</span>
-            <div>
-              <p class="proof-title">A clear integration vocabulary</p>
-              <p>MCPs, skills, APIs, and CLI paths instead of fuzzy AI buzzwords.</p>
-            </div>
-          </div>
-        </section>
 
-        <section class="notes reveal" id="provenance">
-          <div class="section-header">
-            <p class="section-kicker">Provenance</p>
-            <h2>Built directly from transcripted exports.</h2>
-          </div>
-          <div class="note-list" id="note-list"></div>
+          <section class="curriculum reveal" id="curriculum">
+            <div class="section-header">
+              <p class="section-kicker">Video Curriculum</p>
+              <h2>Watch the certification in the exact lesson order.</h2>
+              <p>
+                Each module includes the full video plus a checklist of the main things the learner
+                should now understand.
+              </p>
+            </div>
+            <div class="module-stack" id="module-grid"></div>
+          </section>
         </section>
       </main>
-
-      <footer class="footer">
-        <p>Claude Code Ecosystem Certification</p>
-        <p>Static site, GitHub Pages friendly, transcript-derived.</p>
-      </footer>
     </div>
   </body>
 </html>

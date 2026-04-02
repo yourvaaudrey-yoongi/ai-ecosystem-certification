@@ -1,12 +1,5 @@
 const dataUrl = "site/data/course-data.json";
-
-async function fetchText(path) {
-  const response = await fetch(path);
-  if (!response.ok) {
-    return "";
-  }
-  return response.text();
-}
+const sessionKey = "plotCodeCertificationUser";
 
 function makeChip(text) {
   const chip = document.createElement("span");
@@ -31,23 +24,19 @@ function makeCheck(text) {
   return row;
 }
 
-function transcriptSnippet(text) {
-  const clean = text.replace(/\s+/g, " ").trim();
-  return clean.length > 360 ? `${clean.slice(0, 360).trim()}...` : clean;
-}
-
-async function buildModuleCard(module) {
+function createModuleCard(module) {
   const article = document.createElement("article");
   article.className = "module-card reveal";
 
-  const poster = document.createElement("img");
-  poster.className = "module-poster";
-  poster.src = module.poster;
-  poster.alt = `${module.title} poster frame`;
-  article.append(poster);
+  const video = document.createElement("video");
+  video.controls = true;
+  video.preload = "none";
+  video.poster = module.poster;
+  video.src = module.video;
+  article.append(video);
 
-  const copy = document.createElement("div");
-  copy.className = "module-copy";
+  const body = document.createElement("div");
+  body.className = "module-body";
 
   const meta = document.createElement("div");
   meta.className = "module-meta";
@@ -55,54 +44,56 @@ async function buildModuleCard(module) {
     <span class="module-order">${module.orderLabel}</span>
     <span class="module-duration">${module.duration}</span>
   `;
-  copy.append(meta);
+  body.append(meta);
 
   const title = document.createElement("h3");
   title.className = "module-title";
   title.textContent = module.title;
-  copy.append(title);
+  body.append(title);
 
   const headline = document.createElement("p");
   headline.className = "module-headline";
   headline.textContent = module.headline;
-  copy.append(headline);
+  body.append(headline);
 
   const subheadline = document.createElement("p");
   subheadline.className = "module-subheadline";
   subheadline.textContent = module.subheadline;
-  copy.append(subheadline);
+  body.append(subheadline);
 
-  const focusList = document.createElement("div");
-  focusList.className = "focus-list";
-  module.focus.forEach((item) => {
-    const pill = document.createElement("span");
-    pill.className = "focus-pill";
-    pill.textContent = item;
-    focusList.append(pill);
+  const tags = document.createElement("div");
+  tags.className = "module-tags";
+  ["Video lesson", "Checklist exercise", "Level one curriculum"].forEach((text) => {
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = text;
+    tags.append(tag);
   });
-  copy.append(focusList);
+  body.append(tags);
 
-  const details = document.createElement("details");
-  details.className = "transcript-toggle";
-  const summary = document.createElement("summary");
-  summary.textContent = "Transcript Excerpt";
-  details.append(summary);
-  const snippet = document.createElement("p");
-  snippet.className = "transcript-snippet";
-  snippet.textContent = "Loading excerpt...";
-  details.append(snippet);
-  copy.append(details);
+  const lessonBlock = document.createElement("div");
+  lessonBlock.className = "lesson-block";
 
-  article.append(copy);
+  const heading = document.createElement("h4");
+  heading.textContent = "Checklist Of What They Learned";
+  lessonBlock.append(heading);
 
-  fetchText(module.transcript)
-    .then((text) => {
-      snippet.textContent = transcriptSnippet(text);
-    })
-    .catch(() => {
-      snippet.textContent = "Transcript excerpt unavailable in this preview.";
-    });
+  const checklist = document.createElement("div");
+  checklist.className = "module-checklist";
+  module.focus.forEach((item, index) => {
+    const row = document.createElement("label");
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.name = `${module.id}-${index}`;
+    const text = document.createElement("span");
+    text.textContent = item;
+    row.append(input, text);
+    checklist.append(row);
+  });
+  lessonBlock.append(checklist);
+  body.append(lessonBlock);
 
+  article.append(body);
   return article;
 }
 
@@ -122,18 +113,42 @@ function setupReveal() {
   document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
 }
 
+function updateAuthView() {
+  const user = localStorage.getItem(sessionKey);
+  const authView = document.getElementById("auth-view");
+  const portalView = document.getElementById("portal-view");
+  const logoutButton = document.getElementById("logout-button");
+  const portalTitle = document.getElementById("portal-title");
+
+  if (user) {
+    authView.classList.add("hidden");
+    portalView.classList.remove("hidden");
+    logoutButton.classList.remove("hidden");
+    portalTitle.textContent = `Welcome, ${user}`;
+  } else {
+    authView.classList.remove("hidden");
+    portalView.classList.add("hidden");
+    logoutButton.classList.add("hidden");
+  }
+
+  setupReveal();
+}
+
 async function init() {
   const response = await fetch(dataUrl);
   const data = await response.json();
 
+  document.title = data.title;
   document.getElementById("hero-kicker").textContent = data.kicker;
   document.getElementById("hero-title").textContent = data.title;
   document.getElementById("hero-headline").textContent = data.headline;
   document.getElementById("hero-subheadline").textContent = data.subheadline;
+  document.getElementById("login-title").textContent = data.login.title;
+  document.getElementById("login-subheadline").textContent = data.login.subheadline;
 
   const statRibbon = document.getElementById("stat-ribbon");
   statRibbon.append(
-    makeChip(`${data.stats.lessonCount} source-order modules`),
+    makeChip(`${data.stats.lessonCount} video modules`),
     makeChip(`${data.stats.runtime} total runtime`),
     makeChip(data.stats.format)
   );
@@ -144,20 +159,36 @@ async function init() {
   const outcomeList = document.getElementById("outcome-list");
   data.outcomes.forEach((item) => outcomeList.append(makeCheck(item)));
 
-  const noteList = document.getElementById("note-list");
-  data.notes.forEach((item) => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    noteList.append(li);
+  const moduleGrid = document.getElementById("module-grid");
+  data.modules.forEach((module) => moduleGrid.append(createModuleCard(module)));
+
+  const loginForm = document.getElementById("login-form");
+  const feedback = document.getElementById("login-feedback");
+  loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!email || !password) {
+      feedback.textContent = "Enter both an email and password to continue.";
+      return;
+    }
+
+    const firstName = email.split("@")[0].replace(/[._-]/g, " ");
+    const normalized = firstName.replace(/\b\w/g, (char) => char.toUpperCase());
+    localStorage.setItem(sessionKey, normalized || "Member");
+    feedback.textContent = "Login successful. Opening the certification portal.";
+    updateAuthView();
+    window.location.hash = "curriculum";
   });
 
-  const moduleGrid = document.getElementById("module-grid");
-  for (const module of data.modules) {
-    const card = await buildModuleCard(module);
-    moduleGrid.append(card);
-  }
+  document.getElementById("logout-button").addEventListener("click", () => {
+    localStorage.removeItem(sessionKey);
+    updateAuthView();
+    window.location.hash = "";
+  });
 
-  setupReveal();
+  updateAuthView();
 }
 
 init().catch((error) => {

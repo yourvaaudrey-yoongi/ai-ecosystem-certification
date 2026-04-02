@@ -165,7 +165,7 @@ def render_hero(data: dict) -> None:
         draw.ellipse((990, top + 15, 1006, top + 31), fill="#ea7f3a")
         draw.text((1024, top + 13), item, font=font(SANS_FONT, 16), fill="#4e5c5e")
 
-    draw_badge(img, (1212, 770), 64, "Certified", "Lead Magnet")
+    draw_badge(img, (1212, 770), 64, "Level One", "Certified")
     img.save(BRAND_DIR / "hero-art.png", quality=95)
 
 
@@ -185,7 +185,7 @@ def render_social_card(data: dict) -> None:
     headline_box = draw.multiline_textbbox((150, headline_y), headline_text, font=font(DISPLAY_BOLD, 46), spacing=10)
     body_y = headline_box[3] + 28
     draw.multiline_text((150, body_y), wrap(data["subheadline"], 36), font=font(SANS_FONT, 28), fill="#4e5c5e", spacing=12)
-    draw_badge(img, (1298, 452), 126, "Claude Code", "Certification")
+    draw_badge(img, (1298, 452), 126, "Plot Code", "Level One")
     img.save(BRAND_DIR / "social-card.png", quality=95)
 
 
@@ -215,7 +215,7 @@ def render_slates(data: dict) -> None:
         title_box = draw.multiline_textbbox((132, 182), title_text, font=font(DISPLAY_FONT, 52), spacing=6)
         body_y = title_box[3] + 24
         draw.multiline_text((132, body_y), wrap(body, 34), font=font(SANS_FONT, 26), fill="#4e5c5e", spacing=10)
-        draw_badge(img, (1038, 518), 88, "Claude", "Ecosystem")
+        draw_badge(img, (1038, 518), 88, "Plot", "Code")
         img.save(filename, quality=95)
 
     for index, module in enumerate(data["modules"], start=1):
@@ -237,7 +237,7 @@ def render_slates(data: dict) -> None:
         draw.multiline_text((132, body_y), body_text, font=font(SANS_FONT, 20), fill="#4e5c5e", spacing=8)
         round_rect(draw, (132, 574, 356, 618), 22, fill="#ede1cf", outline="#ddcdb8")
         draw.text((154, 585), f"Runtime: {module['duration']}", font=font(SANS_FONT, 18), fill="#183842")
-        draw_badge(img, (1048, 508), 94, "Certified", f"{index:02d}")
+        draw_badge(img, (1048, 508), 94, "Level One", f"{index:02d}")
         img.save(SLATE_DIR / f"{module['id']}.png", quality=95)
 
 

@@ -1,11 +1,13 @@
-# Claude Code Ecosystem Certification
+# Plot Code Ecosystem Level One Certification
 
-Static one-pager built from the supplied Descript video exports, arranged in source order, with transcript-derived curriculum copy, branded graphics, and optional video packaging scripts.
+Login-gated certification portal built from the supplied Descript video exports, with the actual curriculum videos, branded graphics, transcript-derived lesson copy, and optional media regeneration scripts.
 
 ## What is included
 
 - `index.html`, `styles.css`, `app.js`
-  - GitHub Pages friendly landing page at repo root
+  - GitHub Pages friendly login page plus certification portal at repo root
+- `edited_videos`
+  - Branded lesson videos used directly by the course portal
 - `site/data/course-data.json`
   - Source-of-truth course manifest used by the site and media scripts
 - `transcripts/raw_srt`
@@ -46,4 +48,4 @@ python3 scripts/render_video_package.py
 ## Notes
 
 - The provided `M5` and `M6` exports were zero-byte placeholders, so the delivered curriculum preserves the usable order from the supplied source set: `M1`, `M2`, `M3`, `M4`, `M7`, `M8`, `M9`.
-- Rendered MP4s are intentionally ignored by git because they are large. The repo keeps the scripts and branding needed to recreate them locally.
+- The current login is a standard front-end email/password gate for the static portal. If you want real user accounts, that needs a backend or managed auth provider.

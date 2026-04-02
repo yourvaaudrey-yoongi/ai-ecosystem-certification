@@ -1,34 +1,34 @@
 {
-  "title": "Claude Code Ecosystem Certification",
-  "kicker": "Lead Magnet One-Pager",
-  "headline": "From Operator To Orchestrator With Claude",
-  "subheadline": "A practical certification for teams who want Chat, Cowork, Code, connectors, and delivery workflows working together on day one without turning every operator into a developer.",
+  "title": "Plot Code Ecosystem Level One Certification",
+  "kicker": "Level One Certification",
+  "headline": "Go from getting started to intermediate, fast.",
+  "subheadline": "Learn the workflows, prompting patterns, and execution habits that help operators, employees, and business owners save two to four hours a day once they put the training into practice.",
   "audience": [
-    "Founders and operators building an internal AI operating system",
-    "Executive assistants and virtual assistants who need a repeatable Claude setup",
-    "Recruiting, operations, and delivery leaders who want working demos instead of theory",
-    "Technical teams that need non-technical stakeholders aligned on how Claude actually gets used"
+    "Founders, executives, and business owners who want to learn AI",
+    "Employees who want to level up their skills",
+    "Employers who want their teams trained without spending hours on redundant, pointless training"
   ],
   "outcomes": [
-    "Install Claude desktop and Claude Code with the right account and terminal setup",
-    "Understand when to use Chat, Cowork, and Code in the same workflow",
-    "Configure permissions, browser access, and project folders for smoother execution",
-    "Prompt Claude from business context, not just technical syntax",
-    "Ask for integrations the right way using connectors, MCPs, skills, and CLI paths"
+    "Move from beginner-level usage to an intermediate working command of the ecosystem",
+    "Save two to four hours a day by applying the workflows taught in the certification",
+    "Get certified so you are better positioned to work with businesses using AI",
+    "Train teams faster without forcing them through bloated, repetitive onboarding",
+    "Understand how to use chat, workflow tools, code, and integrations together in one system"
   ],
   "stats": {
     "lessonCount": 7,
     "runtime": "24 minutes",
-    "format": "Transcript-derived, source-order curriculum"
+    "format": "Login-gated video certification"
   },
-  "notes": [
-    "Built from the non-empty source exports provided in the original folder.",
-    "The supplied M5 and M6 exports were empty placeholders, so the delivered sequence preserves the usable lesson order: M1, M2, M3, M4, M7, M8, M9."
-  ],
+  "login": {
+    "title": "Member Login",
+    "subheadline": "Use a standard email and password login to enter the certification portal and access the full lesson library."
+  },
   "modules": [
     {
       "id": "m1-of-1st-45-mins",
       "source": "M1 of 1st 45 mins.mp4",
+      "video": "edited_videos/01-install-access-and-prompt-the-right-way.mp4",
       "orderLabel": "Module 1",
       "title": "Install, Access, And Prompt The Right Way",
       "headline": "Start with a clean account, a local app, and a voice-first prompt workflow.",
@@ -46,6 +46,7 @@
     {
       "id": "m2-of-1st-45-mins",
       "source": "M2 of 1st 45 mins.mp4",
+      "video": "edited_videos/02-map-the-claude-ecosystem.mp4",
       "orderLabel": "Module 2",
       "title": "Map The Claude Ecosystem",
       "headline": "Understand where Chat, Cowork, and Code each fit before you try to operationalize them.",
@@ -63,6 +64,7 @@
     {
       "id": "m3-of-1st-45-mins",
       "source": "M3 of 1st 45 mins.mp4",
+      "video": "edited_videos/03-configure-for-speed-without-losing-control.mp4",
       "orderLabel": "Module 3",
       "title": "Configure For Speed Without Losing Control",
       "headline": "Remove the friction that slows teams down, but understand where the sharp edges are.",
@@ -80,6 +82,7 @@
     {
       "id": "m4-of-1st-45-mins",
       "source": "M4 of 1st 45 mins.mp4",
+      "video": "edited_videos/04-adopt-the-orchestrator-mindset.mp4",
       "orderLabel": "Module 4",
       "title": "Adopt The Orchestrator Mindset",
       "headline": "Stop acting like the person doing every task and start managing teams of agents.",
@@ -97,6 +100,7 @@
     {
       "id": "m7-of-1st-45-mins",
       "source": "M7 of 1st 45 mins.mp4",
+      "video": "edited_videos/05-reinforce-the-business-workflow-layer.mp4",
       "orderLabel": "Module 5",
       "title": "Reinforce The Business Workflow Layer",
       "headline": "Revisit the Cowork surface so non-technical users do not get lost.",
@@ -113,6 +117,7 @@
     {
       "id": "m8-of-1st-45-mins",
       "source": "M8 of 1st 45 mins.mp4",
+      "video": "edited_videos/06-prompt-from-the-role-the-stack-and-the-outcome.mp4",
       "orderLabel": "Module 6",
       "title": "Prompt From The Role, The Stack, And The Outcome",
       "headline": "The best prompts sound like a real operator describing a real mess that needs to be cleaned up.",
@@ -129,6 +134,7 @@
     {
       "id": "m9-of-1st-45-mins",
       "source": "M9 of 1st 45 mins.mp4",
+      "video": "edited_videos/07-ask-for-the-right-integration-layer.mp4",
       "orderLabel": "Module 7",
       "title": "Ask For The Right Integration Layer",
       "headline": "When a connector is not obvious, the vocabulary matters.",
