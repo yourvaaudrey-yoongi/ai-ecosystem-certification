@@ -142,6 +142,38 @@ function updateAuthView() {
   setupReveal();
 }
 
+function submitKitOptIn(loginConfig, email) {
+  const formAction = (loginConfig.kitFormAction || "").trim();
+  if (!formAction) {
+    return false;
+  }
+
+  const form = document.createElement("form");
+  form.method = "post";
+  form.action = formAction;
+  form.target = "kit-optin-frame";
+  form.style.display = "none";
+
+  const fields = {
+    email_address: email,
+    ...(loginConfig.kitTag ? { tag: loginConfig.kitTag } : {}),
+    ...(loginConfig.kitSource ? { source: loginConfig.kitSource } : {})
+  };
+
+  Object.entries(fields).forEach(([name, value]) => {
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = name;
+    input.value = value;
+    form.append(input);
+  });
+
+  document.body.append(form);
+  form.submit();
+  window.setTimeout(() => form.remove(), 1000);
+  return true;
+}
+
 async function init() {
   const response = await fetch(dataUrl);
   const data = await response.json();
@@ -175,17 +207,21 @@ async function init() {
   loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+    const wantsNewsletter = document.getElementById("newsletter-optin").checked;
 
-    if (!email || !password) {
-      feedback.textContent = "Enter both an email and password to continue.";
+    if (!email) {
+      feedback.textContent = "Enter your email to continue.";
       return;
     }
+
+    const optedIn = wantsNewsletter ? submitKitOptIn(data.login, email) : false;
 
     const firstName = email.split("@")[0].replace(/[._-]/g, " ");
     const normalized = firstName.replace(/\b\w/g, (char) => char.toUpperCase());
     localStorage.setItem(sessionKey, normalized || "Member");
-    feedback.textContent = "Login successful. Opening the certification portal.";
+    feedback.textContent = optedIn
+      ? "Access granted. Your email was also sent to the newsletter form."
+      : "Access granted. Opening the certification portal.";
     updateAuthView();
     document.getElementById("portal-view").scrollIntoView({ behavior: "smooth", block: "start" });
   });

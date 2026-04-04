@@ -372,6 +372,15 @@ button {
   font-size: 0.95rem;
 }
 
+.sr-only-frame {
+  width: 0;
+  height: 0;
+  border: 0;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .portal-hero {
   display: flex;
   justify-content: space-between;

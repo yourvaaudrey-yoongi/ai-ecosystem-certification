@@ -81,10 +81,10 @@
               alt="Claude Code Ecosystem certification artwork"
             />
             <div class="login-copy">
-              <p class="section-kicker" id="login-title">Member Login</p>
-              <h2>Enter the certification portal.</h2>
+              <p class="section-kicker" id="login-title">Get Free Access</p>
+              <h2>Unlock the certification portal.</h2>
               <p id="login-subheadline">
-                Use your email and password to access the full course library.
+                Enter your email to access the full course library and opt into updates.
               </p>
             </div>
             <form id="login-form" class="login-form">
@@ -92,26 +92,17 @@
                 <span>Email</span>
                 <input id="email" type="email" name="email" placeholder="you@company.com" required />
               </label>
-              <label class="field">
-                <span>Password</span>
-                <input
-                  id="password"
-                  type="password"
-                  name="password"
-                  placeholder="Enter your password"
-                  required
-                />
-              </label>
               <label class="remember-row">
-                <input type="checkbox" checked />
-                <span>Remember this device</span>
+                <input id="newsletter-optin" type="checkbox" checked />
+                <span>Also subscribe this email to the Kit newsletter</span>
               </label>
-              <button class="button button-primary button-full" type="submit">Log In</button>
+              <button class="button button-primary button-full" type="submit">Get Access</button>
               <p class="form-note" id="login-feedback">
-                Standard front-end login for the course portal. Use any valid email and password to
-                enter.
+                Static email gate for the course portal. With a Kit form action configured, this
+                also captures the email for the newsletter.
               </p>
             </form>
+            <iframe name="kit-optin-frame" class="sr-only-frame" title="Kit opt-in target"></iframe>
           </aside>
         </section>
 

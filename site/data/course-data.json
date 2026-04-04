@@ -21,8 +21,11 @@
     "format": "Login-gated video certification"
   },
   "login": {
-    "title": "Member Login",
-    "subheadline": "Use a standard email and password login to enter the certification portal and access the full lesson library."
+    "title": "Get Free Access",
+    "subheadline": "Enter your email to unlock the certification portal and opt into the newsletter if you want future updates and training drops.",
+    "kitFormAction": "",
+    "kitTag": "",
+    "kitSource": "claude-code-ecosystem-certification"
   },
   "modules": [
     {
