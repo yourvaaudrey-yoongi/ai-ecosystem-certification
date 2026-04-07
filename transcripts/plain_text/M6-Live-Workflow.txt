@@ -1,0 +1,9 @@
+Build A Live Multi-Model Workflow
+
+Run a real workflow where Claude Code delegates to Codex and Gemini simultaneously.
+
+Focus checklist:
+- Setting up parallel terminal sessions across Claude Code, Codex CLI, and Gemini CLI
+- Orchestrator prompt patterns for delegating to sub-agents
+- How to structure CLAUDE.md to include routing instructions
+- Reading outputs from multiple models and integrating them cleanly

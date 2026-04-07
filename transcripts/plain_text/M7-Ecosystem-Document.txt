@@ -1,0 +1,9 @@
+Design Your Ecosystem Document
+
+Leave with a configured, documented, running ecosystem that is yours.
+
+Focus checklist:
+- What goes in your AI Ecosystem Design Document
+- Setting up your CLAUDE.md to include routing rules across models
+- Installing all config files and verifying each tool is reachable
+- The final checklist: ecosystem is live, documented, and ready to use

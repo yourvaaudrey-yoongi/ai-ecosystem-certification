@@ -1,5 +1,5 @@
 const dataUrl = "site/data/course-data.json";
-const sessionKey = "plotCodeCertificationUser";
+const sessionKey = "aiEcosystemCertificationUser";
 
 function makeChip(text) {
   const chip = document.createElement("span");
@@ -63,7 +63,12 @@ function createModuleCard(module) {
 
   const tags = document.createElement("div");
   tags.className = "module-tags";
-  ["Video lesson", "Checklist exercise", "Level one curriculum"].forEach((text) => {
+  const cardTags = ["Video lesson", "Checklist exercise", "AI ecosystem curriculum"];
+  if ((module.duration || "").toLowerCase().includes("coming soon")) {
+    cardTags.push("Placeholder module");
+  }
+
+  cardTags.forEach((text) => {
     const tag = document.createElement("span");
     tag.className = "tag";
     tag.textContent = text;
@@ -75,7 +80,7 @@ function createModuleCard(module) {
   lessonBlock.className = "lesson-block";
 
   const heading = document.createElement("h4");
-  heading.textContent = "Checklist Of What They Learned";
+  heading.textContent = "Checklist Of What You Learned";
   lessonBlock.append(heading);
 
   const checklist = document.createElement("div");

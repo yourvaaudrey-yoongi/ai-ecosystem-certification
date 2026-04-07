@@ -1,0 +1,9 @@
+Install And Configure Codex
+
+Get OpenAI's coding agent running in both the app and the terminal.
+
+Focus checklist:
+- Codex app setup and first build
+- Codex CLI installation and terminal configuration
+- API key setup and cost controls
+- First agentic task compared side by side with Claude Code

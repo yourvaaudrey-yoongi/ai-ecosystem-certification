@@ -1,0 +1,9 @@
+Map Your AI Ecosystem
+
+Understand the full landscape before you build anything.
+
+Focus checklist:
+- The four major coding agent environments and their terminal equivalents
+- Why running everything through one model is expensive and limiting
+- The routing logic that drives 60 to 80 percent cost savings
+- How Superset ties everything together as the MCP coordination layer

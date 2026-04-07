@@ -1,0 +1,9 @@
+Install And Configure The Gemini Stack
+
+Set up Anti-Gravity and Gemini CLI so the Google stack is live in your environment.
+
+Focus checklist:
+- Anti-Gravity download, setup, and first use on Mac
+- Gemini CLI installation and authentication
+- Cursor configuration for Gemini model access
+- What Gemini does better than Claude and Codex and when to use it

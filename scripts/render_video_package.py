@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import json
-import re
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -11,7 +11,7 @@ import imageio_ffmpeg
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "site" / "data" / "course-data.json"
-SOURCE_DIR = Path("/Users/home/Downloads/Descript videos")
+SOURCE_DIR = ROOT / "source_videos"
 BRAND_DIR = ROOT / "site" / "assets" / "brand"
 SLATE_DIR = BRAND_DIR / "slates"
 OUTPUT_DIR = ROOT / "edited_videos"
@@ -20,10 +20,6 @@ TEMP_DIR = OUTPUT_DIR / ".tmp"
 
 def run(cmd: list[str]) -> None:
     subprocess.run(cmd, check=True, capture_output=True, text=True)
-
-
-def safe_slug(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
 
 def build_still_clip(ffmpeg: str, image_path: Path, output_path: Path, seconds: int = 3) -> None:
@@ -124,21 +120,25 @@ def main() -> None:
     outro_clip = TEMP_DIR / "outro-clip.mp4"
     build_still_clip(ffmpeg, outro_image, outro_clip)
 
-    for index, module in enumerate(data["modules"], start=1):
+    for module in data["modules"]:
         source_path = SOURCE_DIR / module["source"]
-        if not source_path.exists() or source_path.stat().st_size == 0:
-            continue
-
-        slug = f"{index:02d}-{safe_slug(module['title'])}"
+        module_video_name = Path(module["video"]).name
+        slug = Path(module_video_name).stem
         intro_image = SLATE_DIR / f"{module['id']}.png"
         intro_clip = TEMP_DIR / f"{slug}-intro.mp4"
         body_clip = TEMP_DIR / f"{slug}-body.mp4"
-        final_clip = OUTPUT_DIR / f"{slug}.mp4"
+        final_clip = OUTPUT_DIR / module_video_name
 
         build_still_clip(ffmpeg, intro_image, intro_clip)
-        clean_body(ffmpeg, source_path, body_clip)
+        if source_path.exists() and source_path.stat().st_size > 0:
+            clean_body(ffmpeg, source_path, body_clip)
+        else:
+            # Keep the published course package complete even before every lesson is recorded.
+            build_still_clip(ffmpeg, intro_image, body_clip, seconds=8)
         concat_clips(ffmpeg, [intro_clip, body_clip, outro_clip], final_clip)
         print(f"Rendered {final_clip.name}")
+
+    shutil.rmtree(TEMP_DIR, ignore_errors=True)
 
 
 if __name__ == "__main__":

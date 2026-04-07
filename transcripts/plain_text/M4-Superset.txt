@@ -1,0 +1,9 @@
+Set Up Superset As Your Orchestration Layer
+
+Install the coordination layer that lets you control all models from one place.
+
+Focus checklist:
+- Superset.sh desktop install on Mac
+- MCP server configuration and connection to Claude Code
+- API key setup and access control
+- Calling Superset from Claude Code as an MCP-connected tool

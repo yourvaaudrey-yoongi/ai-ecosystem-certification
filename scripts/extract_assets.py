@@ -10,7 +10,7 @@ import imageio_ffmpeg
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_DIR = Path("/Users/home/Downloads/Descript videos")
+SOURCE_DIR = Path(__file__).resolve().parents[1] / "source_videos"
 RAW_SRT_DIR = ROOT / "transcripts" / "raw_srt"
 PLAIN_TEXT_DIR = ROOT / "transcripts" / "plain_text"
 POSTER_DIR = ROOT / "site" / "assets" / "posters"
@@ -68,9 +68,9 @@ def main() -> None:
         )
         inspect_text = inspect_result.stderr or inspect_result.stdout
 
-        subprocess.run(
+        srt_result = subprocess.run(
             [ffmpeg, "-y", "-i", str(video_path), "-map", "0:s:0", str(srt_path)],
-            check=True,
+            check=False,
             capture_output=True,
             text=True,
         )
@@ -93,7 +93,10 @@ def main() -> None:
             text=True,
         )
 
-        text = srt_to_text(srt_path.read_text())
+        if srt_result.returncode != 0 or not srt_path.exists():
+            srt_path.write_text("")
+
+        text = srt_to_text(srt_path.read_text()) or f"Transcript placeholder for {stem}."
         text_path.write_text(text)
 
         videos.append(

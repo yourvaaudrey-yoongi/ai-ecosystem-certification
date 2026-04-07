@@ -1,0 +1,9 @@
+Routing Logic - Which Tool, Which Task
+
+The single most valuable skill in a multi-model environment is knowing what to route where.
+
+Focus checklist:
+- Cost-per-task comparison across Codex, Gemini, and Claude Code
+- Codex strengths: focused code generation, refactoring, unit tests
+- Gemini strengths: long-context reasoning, multimodal, document work
+- Claude Code strengths: orchestration, agentic loops, MCP-connected actions

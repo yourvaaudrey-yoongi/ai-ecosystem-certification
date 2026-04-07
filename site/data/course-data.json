@@ -1,155 +1,159 @@
 {
-  "title": "Claude Code Ecosystem Level One Certification",
-  "kicker": "Level One Certification",
-  "headline": "Go from getting started to intermediate, fast.",
-  "subheadline": "Learn the workflows, prompting patterns, and execution habits that help operators, employees, and business owners save two to four hours a day once they put the training into practice.",
+  "title": "AI Ecosystem Certification",
+  "kicker": "Beyond Claude Code",
+  "headline": "Design and run your own multi-model AI ecosystem.",
+  "subheadline": "Learn to install, configure, and route across Codex, Gemini, Anti-Gravity, and Superset so you are not locked into one model - and your AI costs drop 60 to 80 percent while your output doubles.",
   "audience": [
-    "Founders, executives, and business owners who want to learn AI",
-    "Employees who want to level up their skills",
-    "Employers who want their teams trained without spending hours on redundant, pointless training"
+    "Claude Code users who want to expand beyond one model and one vendor",
+    "Technical operators who need to be fluent across all major coding agents",
+    "Business owners and integrators who want multi-model routing working in their environment",
+    "Anyone building or operating AI-powered products who needs cost control and flexibility"
   ],
   "outcomes": [
-    "Move from beginner-level usage to an intermediate working command of the ecosystem",
-    "Save two to four hours a day by applying the workflows taught in the certification",
-    "Get certified so you are better positioned to work with businesses using AI",
-    "Train teams faster without forcing them through bloated, repetitive onboarding",
-    "Understand how to use chat, workflow tools, code, and integrations together in one system"
+    "Install and configure Codex app, Codex CLI, Anti-Gravity, Gemini CLI, and Superset in one session",
+    "Set up Superset as an MCP-connected orchestration layer accessible from Claude Code",
+    "Understand the routing logic that cuts AI costs 60 to 80 percent without sacrificing output quality",
+    "Run a live multi-model workflow where Claude Code delegates to Codex and Gemini simultaneously",
+    "Leave with a documented AI Ecosystem Design Document - a configured CLAUDE.md with routing rules"
   ],
   "stats": {
     "lessonCount": 7,
-    "runtime": "24 minutes",
+    "runtime": "~30 minutes",
     "format": "Login-gated video certification"
   },
   "login": {
     "title": "Get Free Access",
-    "subheadline": "Enter your email to unlock the certification portal and opt into the newsletter if you want future updates and training drops.",
+    "subheadline": "Enter your email to unlock the AI Ecosystem Certification portal and get notified when new modules and tools are added.",
     "kitFormAction": "",
     "kitTag": "",
-    "kitSource": "claude-code-ecosystem-certification"
+    "kitSource": "ai-ecosystem-certification"
   },
   "modules": [
     {
-      "id": "m1-of-1st-45-mins",
-      "source": "M1 of 1st 45 mins.mp4",
-      "video": "edited_videos/01-install-access-and-prompt-the-right-way.mp4",
+      "id": "m1-map-your-ai-ecosystem",
+      "source": "M1-Map-AI-Ecosystem.mp4",
+      "video": "edited_videos/01-map-your-ai-ecosystem.mp4",
       "orderLabel": "Module 1",
-      "title": "Install, Access, And Prompt The Right Way",
-      "headline": "Start with a clean account, a local app, and a voice-first prompt workflow.",
-      "subheadline": "Set up Claude Pro, download the desktop app, install Claude Code in the terminal, and use dictated prompts with simple delimiters so Claude returns a usable checklist instead of vague ideas.",
-      "duration": "7m 16s",
+      "title": "Map Your AI Ecosystem",
+      "headline": "Understand the full landscape before you build anything.",
+      "subheadline": "Get a fast, visual map of every major coding agent available today - what each one does, what it costs to run, where it excels, and how they fit together into one coherent system you can operate from a single command center.",
+      "duration": "11m 09s",
       "focus": [
-        "Account setup and the Pro-plan requirement for Claude Code",
-        "Desktop download plus terminal installation flow",
-        "Prompting by voice with WhisperFlow-style dictation",
-        "Using separators and examples to make prompts more reliable"
+        "The four major coding agent environments and their terminal equivalents",
+        "Why running everything through one model is expensive and limiting",
+        "The routing logic that drives 60 to 80 percent cost savings",
+        "How Superset ties everything together as the MCP coordination layer"
       ],
-      "poster": "site/assets/posters/m1-of-1st-45-mins.jpg",
-      "transcript": "transcripts/plain_text/M1 of 1st 45 mins.txt"
+      "poster": "site/assets/posters/m1-map-your-ai-ecosystem.jpg",
+      "transcript": "transcripts/plain_text/M1-Map-AI-Ecosystem.txt"
     },
     {
-      "id": "m2-of-1st-45-mins",
-      "source": "M2 of 1st 45 mins.mp4",
-      "video": "edited_videos/02-map-the-claude-ecosystem.mp4",
+      "id": "m2-install-configure-codex",
+      "source": "M2-Install-Codex.mp4",
+      "video": "edited_videos/02-install-and-configure-codex.mp4",
       "orderLabel": "Module 2",
-      "title": "Map The Claude Ecosystem",
-      "headline": "Understand where Chat, Cowork, and Code each fit before you try to operationalize them.",
-      "subheadline": "Get a fast product tour of the three working modes, including how Cowork handles business workflows, scheduling, and connectors while Code handles the deeper build work.",
-      "duration": "1m 58s",
+      "title": "Install And Configure Codex",
+      "headline": "Get OpenAI's coding agent running in both the app and the terminal.",
+      "subheadline": "Download and configure the Codex desktop app, then install Codex CLI so you can run it from the terminal exactly the way you run Claude Code - same agentic loop, different model, different strengths.",
+      "duration": "Coming soon",
       "focus": [
-        "The role of Chat for quick questions and one-off answers",
-        "The role of Cowork for connected business workflows",
-        "The role of Code for deeper execution and build tasks",
-        "A quick look at customization, scheduling, and connected apps"
+        "Codex app setup and first build",
+        "Codex CLI installation and terminal configuration",
+        "API key setup and cost controls",
+        "First agentic task compared side by side with Claude Code"
       ],
-      "poster": "site/assets/posters/m2-of-1st-45-mins.jpg",
-      "transcript": "transcripts/plain_text/M2 of 1st 45 mins.txt"
+      "poster": "site/assets/posters/m2-install-configure-codex.jpg",
+      "transcript": "transcripts/plain_text/M2-Install-Codex.txt"
     },
     {
-      "id": "m3-of-1st-45-mins",
-      "source": "M3 of 1st 45 mins.mp4",
-      "video": "edited_videos/03-configure-for-speed-without-losing-control.mp4",
+      "id": "m3-install-gemini-stack",
+      "source": "M3-Gemini-Stack.mp4",
+      "video": "edited_videos/03-install-and-configure-gemini-stack.mp4",
       "orderLabel": "Module 3",
-      "title": "Configure For Speed Without Losing Control",
-      "headline": "Remove the friction that slows teams down, but understand where the sharp edges are.",
-      "subheadline": "Enable bypass permissions mode responsibly, turn on browser access, choose the right working folder, and decide when auto-accept helps versus when it creates unnecessary risk.",
-      "duration": "5m 55s",
+      "title": "Install And Configure The Gemini Stack",
+      "headline": "Set up Anti-Gravity and Gemini CLI so the Google stack is live in your environment.",
+      "subheadline": "Download Anti-Gravity (the Mac-native Gemini desktop app), install and authenticate Gemini CLI, and run your first Gemini-powered coding session from the terminal - then configure Cursor for Gemini-integrated editing.",
+      "duration": "Coming soon",
       "focus": [
-        "Bypass permissions mode and when it is worth enabling",
-        "Claude-in-browser access for logins and web actions",
-        "Project-folder discipline for reliable local work",
-        "A concrete warning about over-trusting destructive cleanup tasks"
+        "Anti-Gravity download, setup, and first use on Mac",
+        "Gemini CLI installation and authentication",
+        "Cursor configuration for Gemini model access",
+        "What Gemini does better than Claude and Codex and when to use it"
       ],
-      "poster": "site/assets/posters/m3-of-1st-45-mins.jpg",
-      "transcript": "transcripts/plain_text/M3 of 1st 45 mins.txt"
+      "poster": "site/assets/posters/m3-install-gemini-stack.jpg",
+      "transcript": "transcripts/plain_text/M3-Gemini-Stack.txt"
     },
     {
-      "id": "m4-of-1st-45-mins",
-      "source": "M4 of 1st 45 mins.mp4",
-      "video": "edited_videos/04-adopt-the-orchestrator-mindset.mp4",
+      "id": "m4-superset-orchestration",
+      "source": "M4-Superset.mp4",
+      "video": "edited_videos/04-set-up-superset-orchestration.mp4",
       "orderLabel": "Module 4",
-      "title": "Adopt The Orchestrator Mindset",
-      "headline": "Stop acting like the person doing every task and start managing teams of agents.",
-      "subheadline": "Use Claude-generated checklists as a starting point, refine vague prompts into role-based work, and learn how experienced operators juggle multiple tabs and terminals while Claude handles execution.",
-      "duration": "4m 23s",
+      "title": "Set Up Superset As Your Orchestration Layer",
+      "headline": "Install the coordination layer that lets you control all models from one place.",
+      "subheadline": "Download Superset.sh, set up the MCP server, and configure your API key so Superset can be controlled directly from Claude Code - or any MCP-compatible tool. This is the layer that makes multi-model routing practical instead of manual.",
+      "duration": "Coming soon",
       "focus": [
-        "Thinking in terms of orchestration instead of manual execution",
-        "Letting Claude produce the first draft of the plan",
-        "Refining prompts when outputs are too personal or too vague",
-        "Turning one prompt into role-based demos for recruiting, ops, and software"
+        "Superset.sh desktop install on Mac",
+        "MCP server configuration and connection to Claude Code",
+        "API key setup and access control",
+        "Calling Superset from Claude Code as an MCP-connected tool"
       ],
-      "poster": "site/assets/posters/m4-of-1st-45-mins.jpg",
-      "transcript": "transcripts/plain_text/M4 of 1st 45 mins.txt"
+      "poster": "site/assets/posters/m4-superset-orchestration.jpg",
+      "transcript": "transcripts/plain_text/M4-Superset.txt"
     },
     {
-      "id": "m7-of-1st-45-mins",
-      "source": "M7 of 1st 45 mins.mp4",
-      "video": "edited_videos/05-reinforce-the-business-workflow-layer.mp4",
+      "id": "m5-routing-logic",
+      "source": "M5-Routing-Logic.mp4",
+      "video": "edited_videos/05-routing-logic-which-tool-which-task.mp4",
       "orderLabel": "Module 5",
-      "title": "Reinforce The Business Workflow Layer",
-      "headline": "Revisit the Cowork surface so non-technical users do not get lost.",
-      "subheadline": "Use this shorter segment as a quick orientation pass through the business-facing side of Claude, including connected apps, schedules, and the working area where recurring tasks get managed.",
-      "duration": "1m 32s",
+      "title": "Routing Logic - Which Tool, Which Task",
+      "headline": "The single most valuable skill in a multi-model environment is knowing what to route where.",
+      "subheadline": "Learn the decision framework for routing coding tasks to Codex, reasoning tasks to Gemini, orchestration to Superset, and complex multi-step builds to Claude Code - with real examples from actual workflows, not theory.",
+      "duration": "10m 58s",
       "focus": [
-        "A fast refresher on the Cowork interface",
-        "Connected apps and schedule-based workflows",
-        "Repetition that helps non-technical viewers retain the product map"
+        "Cost-per-task comparison across Codex, Gemini, and Claude Code",
+        "Codex strengths: focused code generation, refactoring, unit tests",
+        "Gemini strengths: long-context reasoning, multimodal, document work",
+        "Claude Code strengths: orchestration, agentic loops, MCP-connected actions"
       ],
-      "poster": "site/assets/posters/m7-of-1st-45-mins.jpg",
-      "transcript": "transcripts/plain_text/M7 of 1st 45 mins.txt"
+      "poster": "site/assets/posters/m5-routing-logic.jpg",
+      "transcript": "transcripts/plain_text/M5-Routing-Logic.txt"
     },
     {
-      "id": "m8-of-1st-45-mins",
-      "source": "M8 of 1st 45 mins.mp4",
-      "video": "edited_videos/06-prompt-from-the-role-the-stack-and-the-outcome.mp4",
+      "id": "m6-live-multi-model-workflow",
+      "source": "M6-Live-Workflow.mp4",
+      "video": "edited_videos/06-build-a-live-multi-model-workflow.mp4",
       "orderLabel": "Module 6",
-      "title": "Prompt From The Role, The Stack, And The Outcome",
-      "headline": "The best prompts sound like a real operator describing a real mess that needs to be cleaned up.",
-      "subheadline": "Watch an operations scenario get framed in plain English around ClickUp, CRM, Gmail, Calendar, and a local dashboard so Claude can recommend the right setup without requiring the user to be technical.",
-      "duration": "2m 10s",
+      "title": "Build A Live Multi-Model Workflow",
+      "headline": "Run a real workflow where Claude Code delegates to Codex and Gemini simultaneously.",
+      "subheadline": "Watch a production-style build where Claude Code acts as the orchestrator - spawning Codex CLI for code generation, routing reasoning tasks to Gemini CLI, and using Superset to coordinate - while you learn the exact prompt patterns that make delegation work cleanly.",
+      "duration": "Coming soon",
       "focus": [
-        "Using current tools and pain points as prompt inputs",
-        "Asking for a single home base across ClickUp, CRM, email, and calendar",
-        "Stating technical limits clearly so Claude adapts to the user"
+        "Setting up parallel terminal sessions across Claude Code, Codex CLI, and Gemini CLI",
+        "Orchestrator prompt patterns for delegating to sub-agents",
+        "How to structure CLAUDE.md to include routing instructions",
+        "Reading outputs from multiple models and integrating them cleanly"
       ],
-      "poster": "site/assets/posters/m8-of-1st-45-mins.jpg",
-      "transcript": "transcripts/plain_text/M8 of 1st 45 mins.txt"
+      "poster": "site/assets/posters/m6-live-multi-model-workflow.jpg",
+      "transcript": "transcripts/plain_text/M6-Live-Workflow.txt"
     },
     {
-      "id": "m9-of-1st-45-mins",
-      "source": "M9 of 1st 45 mins.mp4",
-      "video": "edited_videos/07-ask-for-the-right-integration-layer.mp4",
+      "id": "m7-design-your-ecosystem",
+      "source": "M7-Ecosystem-Document.mp4",
+      "video": "edited_videos/07-design-your-ecosystem-document.mp4",
       "orderLabel": "Module 7",
-      "title": "Ask For The Right Integration Layer",
-      "headline": "When a connector is not obvious, the vocabulary matters.",
-      "subheadline": "Learn how to ask Claude about API-based integrations, MCPs, skills, and CLI routes so the platform can tell you what is available and what kind of access it needs next.",
-      "duration": "1m 10s",
+      "title": "Design Your Ecosystem Document",
+      "headline": "Leave with a configured, documented, running ecosystem that is yours.",
+      "subheadline": "Build your personal AI Ecosystem Design Document - a CLAUDE.md-style config that specifies which tools you have installed, what each one is used for, and the routing rules your future prompts will follow. This is the certification deliverable.",
+      "duration": "Coming soon",
       "focus": [
-        "Why API keys are not the only integration path",
-        "How MCPs, skills, and CLI options expand what Claude can do",
-        "How to ask better follow-up questions when a system is not prebuilt"
+        "What goes in your AI Ecosystem Design Document",
+        "Setting up your CLAUDE.md to include routing rules across models",
+        "Installing all config files and verifying each tool is reachable",
+        "The final checklist: ecosystem is live, documented, and ready to use"
       ],
-      "poster": "site/assets/posters/m9-of-1st-45-mins.jpg",
-      "transcript": "transcripts/plain_text/M9 of 1st 45 mins.txt"
+      "poster": "site/assets/posters/m7-design-your-ecosystem.jpg",
+      "transcript": "transcripts/plain_text/M7-Ecosystem-Document.txt"
     }
   ]
 }

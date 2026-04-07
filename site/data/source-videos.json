@@ -1,58 +1,65 @@
 [
   {
-    "file_name": "M1 of 1st 45 mins.mp4",
-    "stem": "M1 of 1st 45 mins",
-    "slug": "m1-of-1st-45-mins",
-    "duration": "00:07:16.31",
-    "transcript_path": "transcripts/plain_text/M1 of 1st 45 mins.txt",
-    "poster_path": "assets/posters/m1-of-1st-45-mins.jpg"
+    "file_name": "M1-Map-AI-Ecosystem.mp4",
+    "slug": "m1-map-your-ai-ecosystem",
+    "duration": "00:11:02.53",
+    "video_path": "edited_videos/01-map-your-ai-ecosystem.mp4",
+    "transcript_path": "transcripts/plain_text/M1-Map-AI-Ecosystem.txt",
+    "poster_path": "assets/posters/m1-map-your-ai-ecosystem.jpg",
+    "recorded": true
   },
   {
-    "file_name": "M2 of 1st 45 mins.mp4",
-    "stem": "M2 of 1st 45 mins",
-    "slug": "m2-of-1st-45-mins",
-    "duration": "00:01:57.99",
-    "transcript_path": "transcripts/plain_text/M2 of 1st 45 mins.txt",
-    "poster_path": "assets/posters/m2-of-1st-45-mins.jpg"
+    "file_name": "M2-Install-Codex.mp4",
+    "slug": "m2-install-configure-codex",
+    "duration": "Not recorded",
+    "video_path": "edited_videos/02-install-and-configure-codex.mp4",
+    "transcript_path": "transcripts/plain_text/M2-Install-Codex.txt",
+    "poster_path": "assets/posters/m2-install-configure-codex.jpg",
+    "recorded": false
   },
   {
-    "file_name": "M3 of 1st 45 mins.mp4",
-    "stem": "M3 of 1st 45 mins",
-    "slug": "m3-of-1st-45-mins",
-    "duration": "00:05:54.50",
-    "transcript_path": "transcripts/plain_text/M3 of 1st 45 mins.txt",
-    "poster_path": "assets/posters/m3-of-1st-45-mins.jpg"
+    "file_name": "M3-Gemini-Stack.mp4",
+    "slug": "m3-install-gemini-stack",
+    "duration": "Not recorded",
+    "video_path": "edited_videos/03-install-and-configure-gemini-stack.mp4",
+    "transcript_path": "transcripts/plain_text/M3-Gemini-Stack.txt",
+    "poster_path": "assets/posters/m3-install-gemini-stack.jpg",
+    "recorded": false
   },
   {
-    "file_name": "M4 of 1st 45 mins.mp4",
-    "stem": "M4 of 1st 45 mins",
-    "slug": "m4-of-1st-45-mins",
-    "duration": "00:04:23.30",
-    "transcript_path": "transcripts/plain_text/M4 of 1st 45 mins.txt",
-    "poster_path": "assets/posters/m4-of-1st-45-mins.jpg"
+    "file_name": "M4-Superset.mp4",
+    "slug": "m4-superset-orchestration",
+    "duration": "Not recorded",
+    "video_path": "edited_videos/04-set-up-superset-orchestration.mp4",
+    "transcript_path": "transcripts/plain_text/M4-Superset.txt",
+    "poster_path": "assets/posters/m4-superset-orchestration.jpg",
+    "recorded": false
   },
   {
-    "file_name": "M7 of 1st 45 mins.mp4",
-    "stem": "M7 of 1st 45 mins",
-    "slug": "m7-of-1st-45-mins",
-    "duration": "00:01:32.33",
-    "transcript_path": "transcripts/plain_text/M7 of 1st 45 mins.txt",
-    "poster_path": "assets/posters/m7-of-1st-45-mins.jpg"
+    "file_name": "M5-Routing-Logic.mp4",
+    "slug": "m5-routing-logic",
+    "duration": "00:10:51.98",
+    "video_path": "edited_videos/05-routing-logic-which-tool-which-task.mp4",
+    "transcript_path": "transcripts/plain_text/M5-Routing-Logic.txt",
+    "poster_path": "assets/posters/m5-routing-logic.jpg",
+    "recorded": true
   },
   {
-    "file_name": "M8 of 1st 45 mins.mp4",
-    "stem": "M8 of 1st 45 mins",
-    "slug": "m8-of-1st-45-mins",
-    "duration": "00:02:10.43",
-    "transcript_path": "transcripts/plain_text/M8 of 1st 45 mins.txt",
-    "poster_path": "assets/posters/m8-of-1st-45-mins.jpg"
+    "file_name": "M6-Live-Workflow.mp4",
+    "slug": "m6-live-multi-model-workflow",
+    "duration": "Not recorded",
+    "video_path": "edited_videos/06-build-a-live-multi-model-workflow.mp4",
+    "transcript_path": "transcripts/plain_text/M6-Live-Workflow.txt",
+    "poster_path": "assets/posters/m6-live-multi-model-workflow.jpg",
+    "recorded": false
   },
   {
-    "file_name": "M9 of 1st 45 mins.mp4",
-    "stem": "M9 of 1st 45 mins",
-    "slug": "m9-of-1st-45-mins",
-    "duration": "00:01:09.99",
-    "transcript_path": "transcripts/plain_text/M9 of 1st 45 mins.txt",
-    "poster_path": "assets/posters/m9-of-1st-45-mins.jpg"
+    "file_name": "M7-Ecosystem-Document.mp4",
+    "slug": "m7-design-your-ecosystem",
+    "duration": "Not recorded",
+    "video_path": "edited_videos/07-design-your-ecosystem-document.mp4",
+    "transcript_path": "transcripts/plain_text/M7-Ecosystem-Document.txt",
+    "poster_path": "assets/posters/m7-design-your-ecosystem.jpg",
+    "recorded": false
   }
 ]

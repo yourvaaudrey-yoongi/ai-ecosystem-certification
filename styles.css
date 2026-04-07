@@ -1,15 +1,15 @@
 :root {
-  --bg: #0e2430;
-  --bg-deep: #081721;
-  --surface: #f7efe1;
-  --surface-soft: rgba(247, 239, 225, 0.82);
-  --surface-strong: #fff8ef;
-  --ink: #163540;
-  --muted: #57686d;
-  --line: rgba(22, 53, 64, 0.12);
-  --accent: #ea7f3a;
-  --accent-soft: rgba(234, 127, 58, 0.12);
-  --shadow: 0 30px 80px rgba(5, 20, 29, 0.24);
+  --bg: #0b241f;
+  --bg-deep: #071a17;
+  --surface: #edf8f3;
+  --surface-soft: rgba(237, 248, 243, 0.82);
+  --surface-strong: #f8fffb;
+  --ink: #163b32;
+  --muted: #4e645e;
+  --line: rgba(22, 59, 50, 0.12);
+  --accent: #10b981;
+  --accent-soft: rgba(16, 185, 129, 0.12);
+  --shadow: 0 30px 80px rgba(4, 26, 22, 0.24);
 }
 
 * {
@@ -25,9 +25,9 @@ body {
   font-family: "Avenir Next", "Segoe UI", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(234, 127, 58, 0.34), transparent 26%),
-    radial-gradient(circle at top right, rgba(122, 158, 165, 0.28), transparent 24%),
-    linear-gradient(180deg, #cfb696 0%, #15323e 42%, #081721 100%);
+    radial-gradient(circle at top left, rgba(16, 185, 129, 0.34), transparent 26%),
+    radial-gradient(circle at top right, rgba(70, 141, 122, 0.28), transparent 24%),
+    linear-gradient(180deg, #b9d8ca 0%, #104238 42%, #071a17 100%);
   min-height: 100vh;
 }
 
@@ -103,8 +103,8 @@ button {
   width: 16px;
   height: 16px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #f8c58a, var(--accent));
-  box-shadow: 0 0 0 6px rgba(234, 127, 58, 0.18);
+  background: linear-gradient(135deg, #a9f7db, var(--accent));
+  box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.18);
 }
 
 .eyebrow,
@@ -290,7 +290,7 @@ button {
   margin-top: 5px;
   background:
     radial-gradient(circle at center, var(--accent) 0 42%, transparent 44%),
-    rgba(234, 127, 58, 0.16);
+    rgba(16, 185, 129, 0.16);
 }
 
 .login-card {
