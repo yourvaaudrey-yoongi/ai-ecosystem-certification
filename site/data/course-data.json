@@ -55,7 +55,7 @@
       "title": "Install And Configure Codex",
       "headline": "Get OpenAI's coding agent running in both the app and the terminal.",
       "subheadline": "Download and configure the Codex desktop app, then install Codex CLI so you can run it from the terminal exactly the way you run Claude Code - same agentic loop, different model, different strengths.",
-      "duration": "Coming soon",
+      "duration": "0m 14s",
       "focus": [
         "Codex app setup and first build",
         "Codex CLI installation and terminal configuration",
@@ -73,7 +73,7 @@
       "title": "Install And Configure The Gemini Stack",
       "headline": "Set up Anti-Gravity and Gemini CLI so the Google stack is live in your environment.",
       "subheadline": "Download Anti-Gravity (the Mac-native Gemini desktop app), install and authenticate Gemini CLI, and run your first Gemini-powered coding session from the terminal - then configure Cursor for Gemini-integrated editing.",
-      "duration": "Coming soon",
+      "duration": "0m 14s",
       "focus": [
         "Anti-Gravity download, setup, and first use on Mac",
         "Gemini CLI installation and authentication",
@@ -91,7 +91,7 @@
       "title": "Set Up Superset As Your Orchestration Layer",
       "headline": "Install the coordination layer that lets you control all models from one place.",
       "subheadline": "Download Superset.sh, set up the MCP server, and configure your API key so Superset can be controlled directly from Claude Code - or any MCP-compatible tool. This is the layer that makes multi-model routing practical instead of manual.",
-      "duration": "Coming soon",
+      "duration": "0m 14s",
       "focus": [
         "Superset.sh desktop install on Mac",
         "MCP server configuration and connection to Claude Code",
@@ -127,7 +127,7 @@
       "title": "Build A Live Multi-Model Workflow",
       "headline": "Run a real workflow where Claude Code delegates to Codex and Gemini simultaneously.",
       "subheadline": "Watch a production-style build where Claude Code acts as the orchestrator - spawning Codex CLI for code generation, routing reasoning tasks to Gemini CLI, and using Superset to coordinate - while you learn the exact prompt patterns that make delegation work cleanly.",
-      "duration": "Coming soon",
+      "duration": "0m 14s",
       "focus": [
         "Setting up parallel terminal sessions across Claude Code, Codex CLI, and Gemini CLI",
         "Orchestrator prompt patterns for delegating to sub-agents",
@@ -145,7 +145,7 @@
       "title": "Design Your Ecosystem Document",
       "headline": "Leave with a configured, documented, running ecosystem that is yours.",
       "subheadline": "Build your personal AI Ecosystem Design Document - a CLAUDE.md-style config that specifies which tools you have installed, what each one is used for, and the routing rules your future prompts will follow. This is the certification deliverable.",
-      "duration": "Coming soon",
+      "duration": "0m 14s",
       "focus": [
         "What goes in your AI Ecosystem Design Document",
         "Setting up your CLAUDE.md to include routing rules across models",
