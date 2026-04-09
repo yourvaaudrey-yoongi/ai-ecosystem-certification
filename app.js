@@ -24,13 +24,53 @@ function makeCheck(text) {
   return row;
 }
 
+/* ===== NEW LOGIC START ===== */
+
+function hasVideoContent(module) {
+  return Boolean(module.video && String(module.video).trim());
+}
+
+function isComingSoonLabel(value) {
+  return String(value || "").trim().toLowerCase() === "coming soon";
+}
+
+function formatRuntime(seconds) {
+  if (!Number.isFinite(seconds) || seconds <= 0) {
+    return "Coming soon";
+  }
+
+  const totalSeconds = Math.round(seconds);
+  const minutes = Math.floor(totalSeconds / 60);
+  const remainingSeconds = totalSeconds % 60;
+
+  if (minutes <= 0) {
+    return `0m ${remainingSeconds}s`;
+  }
+
+  return `${minutes}m ${remainingSeconds}s`;
+}
+
+function getInitialRuntimeLabel(module) {
+  if (!hasVideoContent(module)) {
+    return "Coming soon";
+  }
+
+  if (!isComingSoonLabel(module.duration) && String(module.duration || "").trim()) {
+    return module.duration;
+  }
+
+  return "Loading runtime...";
+}
+
+/* ===== NEW LOGIC END ===== */
+
 function createModuleCard(module) {
   const article = document.createElement("article");
   article.className = "module-card reveal";
 
   const video = document.createElement("video");
   video.controls = true;
-  video.preload = "none";
+  video.preload = "metadata";
   video.poster = module.poster;
   video.src = module.video;
   article.append(video);
@@ -40,10 +80,16 @@ function createModuleCard(module) {
 
   const meta = document.createElement("div");
   meta.className = "module-meta";
-  meta.innerHTML = `
-    <span class="module-order">${module.orderLabel}</span>
-    <span class="module-duration">${module.duration}</span>
-  `;
+
+  const order = document.createElement("span");
+  order.className = "module-order";
+  order.textContent = module.orderLabel;
+
+  const duration = document.createElement("span");
+  duration.className = "module-duration";
+  duration.textContent = getInitialRuntimeLabel(module);
+
+  meta.append(order, duration);
   body.append(meta);
 
   const title = document.createElement("h3");
@@ -64,7 +110,8 @@ function createModuleCard(module) {
   const tags = document.createElement("div");
   tags.className = "module-tags";
   const cardTags = ["Video lesson", "Checklist exercise", "AI ecosystem curriculum"];
-  if ((module.duration || "").toLowerCase().includes("coming soon")) {
+
+  if (!hasVideoContent(module)) {
     cardTags.push("Placeholder module");
   }
 
@@ -75,6 +122,18 @@ function createModuleCard(module) {
     tags.append(tag);
   });
   body.append(tags);
+
+  if (hasVideoContent(module)) {
+    video.addEventListener("loadedmetadata", () => {
+      duration.textContent = formatRuntime(video.duration);
+    });
+
+    video.addEventListener("error", () => {
+      duration.textContent = "Coming soon";
+    });
+  } else {
+    duration.textContent = "Coming soon";
+  }
 
   const lessonBlock = document.createElement("div");
   lessonBlock.className = "lesson-block";
